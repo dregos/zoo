@@ -11,7 +11,7 @@
     <tr>
       <td>{{animal.species}}</td>
       <td>{{animal.name}}</td>
-      <td>{{animal.birthDate}}</td>
+      <td>{{animal.birthDate ? animal.birthDate : 'Unknown'}}</td>
       <td><button type="button" name="button" (click)="remove(animal)">Remove</button></td>
     </tr>
   </ng-container>
