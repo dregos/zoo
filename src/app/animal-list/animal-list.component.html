@@ -33,6 +33,7 @@
     <th>Species</th>
     <th>Name</th>
     <th>Date of birth</th>
+    <th>Sector</th>
     <th></th>
   </tr>
   <ng-container *ngFor="let animal of animals">
@@ -40,6 +41,7 @@
       <td>{{animal.species}}</td>
       <td>{{animal.name}}</td>
       <td>{{animal.dateOfBirth ? animal.dateOfBirth : 'Unknown'}}</td>
+      <td>{{animal.sector ? animal.sector.name : 'Ran away'}}</td>
       <td><button type="button" name="button" (click)="remove(animal)">Remove</button></td>
       <td><button type="button" name="button" (click)="moveToTop(animal)">Move to top</button></td>
     </tr>
