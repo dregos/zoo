@@ -47,3 +47,18 @@
     </tr>
   </ng-container>
 </table>
+<hr>
+<table>
+  <tr>
+    <th>Sector</th>
+    <th>Surface</th>
+    <th></th>
+  </tr>
+  <ng-container *ngFor="let sector of sectors">
+    <tr>
+      <td>{{sector.name}}</td>
+      <td>{{sector.surface}}</td>
+      <td><button type="button" name="button" (click)="whichAnimals(sector.name)">Which animals?</button></td>
+    </tr>
+  </ng-container>
+</table>

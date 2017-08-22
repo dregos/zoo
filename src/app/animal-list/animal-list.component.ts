@@ -52,4 +52,13 @@ export class AnimalListComponent {
     this.animals.splice(0,0,animal);
   }
 
+  whichAnimals(sectorName){
+    let listOfAnimals = this.animals.filter(animal=> {
+      return animal.sector.name == sectorName;
+    }).map( animal => {
+        return animal.name;
+    });
+    alert(listOfAnimals);
+  }
+
 }
