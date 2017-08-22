@@ -11,7 +11,7 @@ export class AnimalListComponent {
   private animals : any[];
 
   constructor() {
-    
+
     this.animals = [
       new Animal('Elephant','Nelly','05.09.1999' ),
       new Animal('Elephant','Wally','01.03.1989' ),
@@ -33,6 +33,12 @@ export class AnimalListComponent {
 
   add(animal){
     this.animals.push(animal);
+  }
+
+  moveToTop(animal){
+    const index = this.animals.indexOf(animal);
+    this.animals.splice(index, 1);
+    this.animals.splice(0,0,animal);
   }
 
 }

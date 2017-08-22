@@ -13,6 +13,7 @@
       <td>{{animal.name}}</td>
       <td>{{animal.dateOfBirth ? animal.dateOfBirth : 'Unknown'}}</td>
       <td><button type="button" name="button" (click)="remove(animal)">Remove</button></td>
+      <td><button type="button" name="button" (click)="moveToTop(animal)">Move to top</button></td>
     </tr>
   </ng-container>
 </table>
