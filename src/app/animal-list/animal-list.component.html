@@ -1,0 +1,18 @@
+<h1>Vivify Zoo</h1>
+
+<table>
+  <tr>
+    <th>Species</th>
+    <th>Name</th>
+    <th>Date of birth</th>
+    <th></th>
+  </tr>
+  <ng-container *ngFor="let animal of animals">
+    <tr>
+      <td>{{animal.species}}</td>
+      <td>{{animal.name}}</td>
+      <td>{{animal.birthDate}}</td>
+      <td><button type="button" name="button" (click)="remove(animal)">Remove</button></td>
+    </tr>
+  </ng-container>
+</table>
