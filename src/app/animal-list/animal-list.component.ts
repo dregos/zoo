@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from '../animal/animal';
 
+
 @Component({
   selector: 'app-animal-list',
   templateUrl: './animal-list.component.html',
@@ -9,6 +10,8 @@ import { Animal } from '../animal/animal';
 
 export class AnimalListComponent {
   private animals : any[];
+
+  private animal: Animal = new Animal('','','');
 
   constructor() {
 
@@ -31,8 +34,9 @@ export class AnimalListComponent {
     this.animals.splice(index, 1);
   }
 
-  add(animal){
-    this.animals.push(animal);
+  add(){
+    this.animals.push(this.animal);
+    this.animal = new Animal('','','');
   }
 
   moveToTop(animal){

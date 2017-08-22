@@ -2,6 +2,34 @@
 
 <table>
   <tr>
+    <td>Species:</td>
+    <td>
+      <input type="text" name="species" [(ngModel)]="animal.species">
+    </td>
+  </tr>
+  <tr>
+    <td>Name:</td>
+    <td>
+      <input type="text" name="name" [(ngModel)]="animal.name">
+    </td>
+  </tr>
+  <tr>
+    <td>Date of birth:</td>
+    <td>
+      <input type="date" name="dateOfBirth" [(ngModel)]="animal.dateOfBirth">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="align-center">
+      <button type="button" name="button" (click)="add()">Add new</button>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<table>
+  <tr>
     <th>Species</th>
     <th>Name</th>
     <th>Date of birth</th>
